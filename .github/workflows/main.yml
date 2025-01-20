@@ -17,13 +17,13 @@ jobs:
   boost_security_semgrep:
     name: Semgrep scan
     runs-on: ubuntu-latest
+    env:
+      BOOST_LOG_LEVEL: DEBUG
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Semgrep scan
         uses: boostsecurityio/boostsec-scanner-github@v4
-        env:
-          BOOST_LOG_LEVEL: DEBUG
         with:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: boostsecurityio/semgrep
