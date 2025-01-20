@@ -27,4 +27,4 @@ jobs:
         with:
           api_token: ${{ secrets.BOOST_API_TOKEN }}
           registry_module: boostsecurityio/semgrep
-          log_level: DEBUG
+          log_level: TRACE
