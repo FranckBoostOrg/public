@@ -39,4 +39,8 @@ pipeline:
                     connectorRef: dockerhub
                     image: alpine
                     shell: Sh
-                    command: echo "Hello world"
+                    command: |-
+                      echo "Hello world"
+                      echo "$SECRET_KEY"
+                    envVariables:
+                      SECRET_KEY: <+secrets.getValue('super_secret')>
