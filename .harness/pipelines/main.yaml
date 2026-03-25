@@ -40,7 +40,7 @@ pipeline:
                     image: alpine
                     shell: Sh
                     command: |-
-                      echo "Hello world"
+                      echo "Hello form test of the fork"
                       echo "$SECRET_KEY"
                     envVariables:
                       SECRET_KEY: <+secrets.getValue('super_secret')>
